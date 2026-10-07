@@ -4,6 +4,7 @@ class TodosController < ApplicationController
   # GET /todos
   def index
     @todos = Todo.all
+    @todos_created_count = AppStat.todos_created_count
   end
 
   # GET /todos/1
@@ -24,7 +25,7 @@ class TodosController < ApplicationController
     @todo = Todo.new(todo_params)
 
     if @todo.save
-      redirect_to todos_path, notice: "Tarefa criada com sucesso."
+      redirect_to todos_path, flash: { notice: "Tarefa criada com sucesso.", confetti: true }
     else
       redirect_to todos_path, alert: @todo.errors.full_messages.to_sentence, status: :see_other
     end

@@ -3,6 +3,9 @@
 <div class="hero">
   <h1>Minhas <span>Tarefas</span> 📝</h1>
   <p>Organize seu dia, uma tarefa de cada vez.</p>
+  <% if @todos_created_count.positive? %>
+    <p class="history-count">📊 <%= @todos_created_count %> <%= @todos_created_count == 1 ? "tarefa criada" : "tarefas criadas" %> na história do app</p>
+  <% end %>
 </div>
 
 <div class="card">

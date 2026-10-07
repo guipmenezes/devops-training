@@ -22,7 +22,7 @@
   <body>
     <main class="container">
       <% if notice %>
-        <p class="notice"><%= notice %></p>
+        <p class="notice" data-confetti="<%= flash[:confetti] ? "true" : "false" %>"><%= notice %></p>
       <% end %>
       <% if alert %>
         <p class="alert"><%= alert %></p>

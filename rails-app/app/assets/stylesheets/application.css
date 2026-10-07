@@ -65,6 +65,17 @@ body {
   font-size: 0.95rem;
 }
 
+.hero .history-count {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 /* ---------- Cartões ---------- */
 
 .card {
